@@ -6,11 +6,16 @@ import "./App.css";
 
 const App = () => {
   return (
-    <>
-      <TaskInput />
-      <TaskList />
-      <TaskItem />
-    </>
+    <div className="container">
+      <div className="container_card">
+        <h1 classname="title">React Task-list ✅</h1>
+        <div className="item">
+          <TaskInput />
+          <TaskList />
+          <TaskItem />
+        </div>
+      </div>
+    </div>
   );
 };
 
