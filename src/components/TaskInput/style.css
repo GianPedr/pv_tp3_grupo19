@@ -1,0 +1,23 @@
+.inputTask {
+  margin: 15px 0 0 0;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.btnTask {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btnTask:hover {
+  background-color: #218838;
+}
