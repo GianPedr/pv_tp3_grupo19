@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import './style.css';
+import { useState } from "react";
+import "./style.css";
 
 const TaskInput = ({ onAddTask }) => {
-  const [taskTitle, setTaskTitle] = useState('');
+  const [taskTitle, setTaskTitle] = useState("");
 
   const handleAddTask = () => {
     onAddTask(taskTitle);
-    setTaskTitle(''); // Limpiar el input
+    setTaskTitle(""); // Limpiar el input
   };
 
   return (
@@ -16,9 +16,9 @@ const TaskInput = ({ onAddTask }) => {
         value={taskTitle}
         onChange={(e) => setTaskTitle(e.target.value)}
         placeholder="Escribe una nueva tarea..."
-        className="task-input"
+        className="inputTask"
       />
-      <button onClick={handleAddTask} className="add-task-btn">
+      <button onClick={handleAddTask} className="btnTask">
         Agregar
       </button>
     </div>
