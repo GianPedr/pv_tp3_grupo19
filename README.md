@@ -74,7 +74,10 @@ Cuando otro compañero desarrolle el componente TaskItem oficial, este archivo d
 ## Autor
 
 GIANFRANCO PEDRAZZANI - [GitHub](https://github.com/GianPedr)
-
+DARIO MARTINEZ - [GitHub](https://github.com/martinezcabj12)
+MATIAS VARGAS  - [GitHub](https://github.com/MatiasVargasDev)
+BRISA BARRO - [GitHub](https://github.com/BarroBrisa)
+MARCELO ORTIZ - [GitHub](https://github.com/marceortiz)
 ---
 
 > Este componente fue desarrollado como parte del TP3 para la materia Programación en Visual en la Universidad UNJu.
