@@ -1,36 +1,27 @@
-import { useState } from "react";
+import { useState } from 'react';
+import './style.css';
 
-import { task } from "../../models/task";
-import "./style.css";
-
-const TaskInput = () => {
-  const [title, setTitle] = useState("");
-
-  const handleInputChange = (event) => {
-    setTitle(event.target.value);
-  };
+const TaskInput = ({ onAddTask }) => {
+  const [taskTitle, setTaskTitle] = useState('');
 
   const handleAddTask = () => {
-    if (title.trim() === "") {
-      alert("Debe ingresar un título");
-      return;
-    }
-    const newTask = new task(lets.tasks.length + 1, title, false);
+    onAddTask(taskTitle);
+    setTaskTitle(''); // Limpiar el input
   };
 
   return (
-    <>
+    <div className="task-input-container">
       <input
-        className="inputTask"
         type="text"
-        value={title}
-        onChange={handleInputChange}
-        placeholder="Ingresar Nueva Tarea..."
+        value={taskTitle}
+        onChange={(e) => setTaskTitle(e.target.value)}
+        placeholder="Escribe una nueva tarea..."
+        className="task-input"
       />
-      <button className="btnTask" onClick={handleAddTask}>
+      <button onClick={handleAddTask} className="add-task-btn">
         Agregar
       </button>
-    </>
+    </div>
   );
 };
 

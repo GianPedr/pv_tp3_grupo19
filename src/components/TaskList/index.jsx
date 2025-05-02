@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import TaskItem from '../TaskItem';
+import TaskInput from '../TaskInput';
+import { task as TaskModel } from '../../models/task'; // Importar el modelo
 import './style.css';
 
 const TaskList = () => {
@@ -30,34 +32,26 @@ const TaskList = () => {
   // Función para añadir una nueva tarea (para conectar con TaskInput)
   const addNewTask = (taskTitle) => {
     if (taskTitle.trim()) {
-      const newTask = {
-        id: Date.now(), // Genera un ID único basado en timestamp
-        title: taskTitle, 
-        completed: false
-      };
+      const newTask = new TaskModel(Date.now(), taskTitle, false); // Usar el modelo
       setTasks([...tasks, newTask]);
     }
   };
 
-  // Mostrar mensaje si no hay tareas
-  if (tasks.length === 0) {
-    return (
-      <div className="task-list-container empty">
-        <p>No hay tareas pendientes</p>
-      </div>
-    );
-  }
-
   return (
     <div className="task-list-container">
-      {tasks.map(task => (
-        <TaskItem
-          key={task.id}
-          task={task}
-          onToggleStatus={() => toggleTaskStatus(task.id)}
-          onDeleteTask={() => deleteTask(task.id)}
-        />
-      ))}
+      <TaskInput onAddTask={addNewTask} />
+      {tasks.length === 0 ? (
+        <p>No hay tareas pendientes</p>
+      ) : (
+        tasks.map(task => (
+          <TaskItem
+            key={task.id}
+            task={task}
+            onToggleStatus={toggleTaskStatus}
+            onDeleteTask={deleteTask}
+          />
+        ))
+      )}
     </div>
   );
 };
