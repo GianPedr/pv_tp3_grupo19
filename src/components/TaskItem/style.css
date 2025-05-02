@@ -60,3 +60,18 @@
   .delete-btn:hover {
     background-color: #d32f2f;
   }
+
+  .complete-btn {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .complete-btn:hover {
+    background-color: #388e3c; /* Verde más oscuro */
+  }
