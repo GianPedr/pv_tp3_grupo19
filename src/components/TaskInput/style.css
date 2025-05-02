@@ -1,17 +1,23 @@
+.task-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 .inputTask {
-  margin: 15px 0 0 0;
   width: 100%;
   padding: 10px;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 0px 0px 10px;
   border: 1px solid #ccc;
   font-size: 16px;
 }
 
 .btnTask {
-  margin-bottom: 15px;
   padding: 10px;
-  border-radius: 0px 0px 10px 10px;
-  border: none;
+  border-radius: 0px 10px 10px 0px;
+  border: 1px solid #ccc;
   background-color: #28a745;
   color: white;
   font-size: 16px;
